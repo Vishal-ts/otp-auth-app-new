@@ -1,0 +1,81 @@
+.register-page {
+    --background: #ffffff;
+  }
+  
+  .register-container {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    text-align: left;
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 4px;
+  }
+  
+  .subtitle {
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 20px;
+  }
+  
+  .mobile-input-wrapper {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    background: #fff;
+  }
+  
+  .country-select {
+    border: none;
+    padding: 10px;
+    width: 90px;
+    font-size: 16px;
+    background-color: #f8f8f8;
+    appearance: none;
+    color: #000;
+  }
+  
+  .number-input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    --padding-start: 10px;
+    --color: #000;
+    color: #000;
+    background: transparent;
+  }
+  
+  .error {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .success {
+    color: green;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  .country-code-select {
+    max-width: 90px;
+    --color: black; /* selected value color */
+    --placeholder-color: black;
+    --background: white;
+    --indicator-color: black; /* dropdown arrow */
+  }
+  
+  ion-select::part(text) {
+    color: black;
+  }
+  
+  ion-select-option {
+    color: black;
+  }
+  
+  

@@ -1,0 +1,40 @@
+<ion-content class="ion-padding register-page">
+  <div class="register-container">
+    <h1 class="title">Register</h1>
+    <p class="subtitle">Enter the mobile number to get the OTP</p>
+
+    <div class="mobile-input-wrapper">
+      <ion-select
+      [(ngModel)]="selectedCountryCode"
+      interface="popover"
+      class="country-code-select"
+      placeholder="+91"
+    >
+      <ion-select-option *ngFor="let code of countryCodes" [value]="code">
+        {{ code }}
+      </ion-select-option>
+    </ion-select>
+    
+    
+      <ion-input
+      placeholder="Mobile number"
+      [value]="mobileNumber"
+      (ionInput)="onNumberInput($event)"
+      (keypress)="blockNonNumbers($event)"
+      maxlength="14"
+      inputmode="numeric"
+      class="number-input"
+    ></ion-input>
+    
+    </div>
+
+    <p class="error" *ngIf="validationError">{{ validationError }}</p>
+    <p class="success" *ngIf="showSuccessMessage">✅ OTP sent successfully to {{ selectedCountryCode }}{{ mobileNumber }}</p>
+
+    <ion-button expand="block" (click)="sendOtp()">Send OTP</ion-button>
+
+    <ion-button *ngIf="showSuccessMessage" expand="block" fill="outline" (click)="goToOtpPage()">
+      Verify OTP
+    </ion-button>
+  </div>
+</ion-content>

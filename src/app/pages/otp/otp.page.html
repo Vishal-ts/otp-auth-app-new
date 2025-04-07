@@ -1,0 +1,34 @@
+<ion-content class="ion-padding otp-page">
+  <div class="form-wrapper">
+    <h2 class="title">OTP Verification</h2>
+    <p class="subtitle">Enter the OTP sent to your number</p>
+
+    <ion-item lines="full" class="input-wrapper">
+      <ion-input
+        type="text"
+        placeholder="Enter 6-digit OTP"
+        [(ngModel)]="otp"
+        (input)="onOtpInput($event)"
+        (keypress)="blockNonNumbers($event)"
+        maxlength="6"
+        inputmode="numeric"
+      ></ion-input>
+    </ion-item>
+    
+    <div *ngIf="validationError" class="error-msg">{{ validationError }}</div>
+
+    <ion-button
+    expand="block"
+    color="{{ isOtpVerified ? 'success' : 'primary' }}"
+    (click)="verifyOtp()"
+    [disabled]="otp.length !== 6"
+  >
+    {{ isOtpVerified ? 'OTP Verified' : 'Verify OTP' }}
+  </ion-button>
+  
+
+    <div class="note">
+      <strong>Note for Interviewer:</strong> This is a mock OTP system. Use OTP: <code>123456</code>
+    </div>
+  </div>
+</ion-content>

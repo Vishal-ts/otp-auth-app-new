@@ -1,0 +1,60 @@
+.otp-page {
+    --background: #ffffff;
+    color: #ffffff;
+  
+    .form-wrapper {
+      max-width: 400px;
+      margin: 0 auto;
+      padding-top: 10vh;
+    }
+  
+    .title {
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 6px;
+      color: #000;
+    }
+  
+    .subtitle {
+      font-size: 14px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+  
+    .input-wrapper {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-bottom: 14px;
+      background: #fff;
+    }
+  
+    ion-item {
+      --background: transparent; /* Keep item background transparent */
+      --border-color: #ccc; /* Default color for border */
+    }
+  
+    ion-input {
+      --padding-start: 16px; /* Ensure padding inside the input field */
+      --background: white; /* White background for input */
+      --border-color: #ccc; /* Light gray border */
+      --color: black; /* Black text */
+      --border-radius: 4px; /* Standard border radius */
+      --border-width: 1px; /* 1px border width */
+    }
+  
+    .error-msg {
+      color: red;
+      margin-bottom: 12px;
+      font-size: 14px;
+    }
+  
+    .note {
+      margin-top: 20px;
+      font-size: 13px;
+      color: #555;
+      background: #f9f9f9;
+      padding: 10px;
+      border-radius: 6px;
+    }
+  }
+  
