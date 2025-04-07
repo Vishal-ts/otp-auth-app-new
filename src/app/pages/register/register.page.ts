@@ -55,7 +55,7 @@ export class RegisterPage {
   }
 
   onNumberInput(event: any) {
-    const input = event.target.value.replace(/\D/g, ''); // Keep only digits
+    const input = event.target.value.replace(/\D/g, ''); 
     this.mobileNumber = input;
   }
 

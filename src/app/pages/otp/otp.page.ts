@@ -39,8 +39,8 @@ export class OtpPage {
       
       // Display success message and then navigate to dashboard after a delay
       setTimeout(() => {
-        this.router.navigate(['/dashboard']); // Navigate to dashboard after success
-      }, 1500); // Delay of 1.5 seconds before redirect
+        this.router.navigate(['/dashboard']);
+      }, 1500); 
     } else {
       this.validationError = 'Incorrect OTP. Please try again.';
       this.isOtpVerified = false;
