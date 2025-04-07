@@ -1,0 +1,7 @@
+{
+  "name": "otp-app-clean",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
